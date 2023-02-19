@@ -7,7 +7,7 @@ using namespace std;
 class student
 {
 int rollno;
-char name[50];
+char name[100];
 int eng_marks, math_marks, sci_marks, lang2_marks, cs_marks;
 double average;
 char grade;
@@ -22,7 +22,7 @@ int retrollno() const;
 void student::calculate()
 {
 average=(eng_marks+math_marks+sci_marks+lang2_marks+cs_marks)/5.0;
-if(average>=90)
+if(average>=85)
 grade='A';
 else if(average>=75)
 grade='B';
@@ -38,7 +38,7 @@ cout<<"\nEnter student's roll number: ";
 cin>>rollno;
 cout<<"\n\nEnter student name: ";
 cin.ignore();
-cin.getline(name,50);
+cin.getline(name,100);
 cout<<"\nAll marks should be out of 100";
 cout<<"\nEnter marks in English: ";
 cin>>eng_marks;
